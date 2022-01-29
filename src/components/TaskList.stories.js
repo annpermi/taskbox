@@ -25,6 +25,7 @@ Default.args = {
     { ...TaskStories.Default.args.task, id: "4", title: "Task 4" },
     { ...TaskStories.Default.args.task, id: "5", title: "Task 5" },
     { ...TaskStories.Default.args.task, id: "6", title: "Task 6" },
+    { ...TaskStories.Default.args.task, id: "7", title: "Task 7" },
   ],
 };
 
@@ -43,8 +44,8 @@ WithArchivedTasks.args = {
   // Shaping the stories through args composition.
   // Inherited data coming from the Default story.
   tasks: [
-    ...Default.args.tasks.slice(0, 5),
-    { id: "6", title: "Task 6 (archived)", state: "TASK_ARCHIVED" },
+    ...Default.args.tasks.slice(0, 6),
+    { id: "7", title: "Task 7 (archived)", state: "TASK_ARCHIVED" },
   ],
 };
 

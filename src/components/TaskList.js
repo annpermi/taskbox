@@ -64,8 +64,8 @@ export default function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
   ];
   return (
     <div className="list-items">
-      {tasksInOrder.map((task) => (
-        <Task key={task.id} task={task} {...events} />
+      {tasksInOrder.map((task, i) => (
+        <Task key={i} task={task} {...events} />
       ))}
     </div>
   );
