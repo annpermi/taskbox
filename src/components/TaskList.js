@@ -26,6 +26,8 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask }) {
     onArchiveTask,
   };
 
+  console.log(onPinTask, onArchiveTask);
+
   const LoadingRow = (
     <div className="loading-item">
       <span className="glow-checkbox" />
@@ -59,10 +61,10 @@ export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask }) {
   }
   const tasksInOrder = [
     ...tasks.filter(
-      (t) => t.state === "TASK_PINNED" || t.state === "TASK_ARCHIVED"
+      (t) => t.state === "TASK_PINNED" /* || t.state === "TASK_ARCHIVED" */
     ),
     ...tasks.filter(
-      (t) => t.state !== "TASK_PINNED" || t.state !== "TASK_ARCHIVED"
+      (t) => t.state !== "TASK_PINNED" /* || t.state !== "TASK_ARCHIVED" */
     ),
   ];
   return (
